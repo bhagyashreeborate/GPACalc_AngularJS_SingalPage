@@ -1,0 +1,35 @@
+<div id="container">
+    <div style="display:flex;border:1px dotted black;margin-bottom:20px;margin-top:50px;">
+
+        <div class="col-xs-4" style="margin-top:60px;">
+            <h4><b>How many courses have you taken? :</b> </h4><br/>
+            <h6>Enter number and then Select respective Grade from the select box.</h6></div>
+
+        <div style="border-left:1px solid black;margin:0 7.5px;"></div>
+
+        <div class="col-xs-4" style="margin-top:60px;">
+            Please enter number between 1-10.
+            <input type="number" ng-model="entries" ng-change="upateEntries()" class="form-control" id="input_nr" min="0" max="10" placeholder="Enter total number of courses taken">
+
+            <div ng-repeat="item in items track by $index">Subject {{$index+1}} -
+
+                <select class="select-style"  ng-model='items[$index]' style="margin-left: 10px;">
+
+                    <option ng-repeat="x in names" value="{{x.point}}">{{x.grade}}</option>
+                </select>
+
+            </div>
+            <div style="margin-left:70px;margin-top:20px;">
+                <button class="btn btn-primary" type="button" ng-click="saveAllValues(items)" ng-disabled="!entries">Save</button>
+            </div>
+        </div>
+        <div style="border-left:1px solid black;margin:0 7.5px;"></div>
+
+        <div class="col-xs-4" style="margin-top:60px;">
+            <b>TOTAL GPA</b> : <h1>{{avg1}} / 4.0</h1><br/><h4>{{result}}</h4>
+        </div>
+
+    </div>
+
+
+</div>

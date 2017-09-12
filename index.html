@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en" ng-app="myApp">
+<head>
+    <meta charset="utf-8">
+    <title>GPA Calculator</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="app.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.26/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.26/angular-route.min.js"></script>
+    <script src="app.js"></script>
+</head>
+<body>
+
+<div id="header" ng-controller="HeaderCntrl">
+    <div style="margin-left:100px;">
+        <div class="col-xs-6 left">
+            <h1>{{appDetails.title}}</h1>
+            <h6>{{appDetails.tagline}}</h6>
+        </div>
+
+        <div class="col-xs-6"></div>
+
+        <div class="col-xs-6 right" style="margin-top:20px">
+            <ul class="nav nav-pills">
+                <li class="active"><a href="#/gpa">GPA</a></li>
+                <li><a href="#/cgpa">CGPA</a></li>
+            </ul>
+        </div>
+    </div>
+
+</div>
+<hr/>
+
+<div ng-view>
+
+
+</div>
+
+<div id="footer">&copy;Copyright 2017. Developed by <a href="http://borate-bhagyashree.blogspot.in/" target="_blank">Bhagyashree Borate</a></div>
+
+</body>
+</html>
